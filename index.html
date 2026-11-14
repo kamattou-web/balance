@@ -89,7 +89,7 @@ html.hc .tp-saisie input[aria-invalid=true]{background:#400;color:#fff}
 @media (max-width:560px){.tp-jr:not(.tp-saisie) table{font-size:14px}.tp-jr:not(.tp-saisie) th,.tp-jr:not(.tp-saisie) td{padding:5px 4px}.tp-int{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 </style><script id="tpac-js">/* Balance : fonctions propres (écritures au journal, glossaire, accueil, cache).
    Chargé AVANT le script principal : les fonctions sont appelées par vue() au moment du rendu. */
-var TPAC_V="tpac-v4-2026-11-15",TPAC_FILES=["./", "index.html", "balance-hors-ligne.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png", "favicon.png", "voix/neural.js"];
+var TPAC_V="tpac-v5-2026-11-15",TPAC_FILES=["./", "index.html", "balance-hors-ligne.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png", "favicon.png", "voix/neural.js"];
 function tpE(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]});}
 /* Montants : 1234.5 -> « 1 234,50 € » (espace fine insécable comme séparateur, virgule décimale). */
 function tpEuro(n){n=Math.round((+n||0)*100)/100;var neg=n<0,a=Math.abs(n).toFixed(2).split("."),e=a[0].replace(/\B(?=(\d{3})+(?!\d))/g,"\u00a0");return(neg?"−":"")+e+","+a[1]+"\u00a0€";}
@@ -1213,4 +1213,4 @@ document.addEventListener("toggle",function(e){if(e.target.matches&&e.target.mat
 var pend=false;new MutationObserver(function(){if(pend)return;pend=true;setTimeout(function(){pend=false;decorate();},0);}).observe(document.getElementById("app")||document.body,{childList:true,subtree:true});
 decorate();
 })();
-</script></body></html>
+</script><style id="bh-css">.backhome{transition:transform .2s}.backhome.bh-hide{transform:translateY(-120%)}details.dil,h2,h3{scroll-margin-top:72px}</style><script id="bh-js">(function(){var y=scrollY;addEventListener("scroll",function(){var n=scrollY,b=document.querySelector(".backhome");if(!b)return;if(n>y+8&&n>80)b.classList.add("bh-hide");else if(n<y-8||n<80)b.classList.remove("bh-hide");y=n;},{passive:true});document.addEventListener("focusin",function(e){if(e.target.classList&&e.target.classList.contains("backhome"))e.target.classList.remove("bh-hide");});})();</script></body></html>
